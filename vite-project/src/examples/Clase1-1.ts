@@ -9,14 +9,6 @@ interface UsuarioInterface {
     actualizarEmail: (nuevoEmail: string) => void;
 }
 
-function saludar(usuario: UsuarioInterface) {
-    usuario.saludar();
-}
-
-function actualizarEmail(usuario: UsuarioInterface, nuevoEmail: string) {
-    usuario.email = nuevoEmail;
-}
-
 interface DireccionInterface {
     ciudad: string;
     pais: string;
