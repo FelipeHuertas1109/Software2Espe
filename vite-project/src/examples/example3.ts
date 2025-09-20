@@ -10,7 +10,7 @@ interface UsuarioInterface {
 }
 
 function saludar(usuario: UsuarioInterface) {
-    console.log(`Hola ${usuario.nombre}`);
+    usuario.saludar();
 }
 
 function actualizarEmail(usuario: UsuarioInterface, nuevoEmail: string) {
@@ -32,10 +32,10 @@ const usuario: UsuarioInterface = {
         ciudad: "Medellín",
         pais: "Colombia"
     },
-    saludar: () => {
-        console.log("Hola");
+    saludar: function() {
+        console.log(`Hola, mi nombre es ${this.nombre}`);
     },
-    actualizarEmail: (nuevoEmail: string) => {
-        usuario.email = nuevoEmail;
+    actualizarEmail: function(nuevoEmail: string) {
+        this.email = nuevoEmail;
     }
 }
