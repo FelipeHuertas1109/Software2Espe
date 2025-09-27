@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "seconProjectAngular": {
+    "project26sep": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -26,12 +26,7 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -61,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "seconProjectAngular:build:production"
+              "buildTarget": "project26sep:build:production"
             },
             "development": {
-              "buildTarget": "seconProjectAngular:build:development"
+              "buildTarget": "project26sep:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,5 +88,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
