@@ -11,3 +11,6 @@ nav a {
     text-decoration: none;
 }
 
+nav a.active {
+    color: blue;
+}
