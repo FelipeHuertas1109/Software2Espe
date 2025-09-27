@@ -1,14 +1,19 @@
 import { Component, computed, Signal, signal, WritableSignal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Personaje } from './dragonball.interface';
+
+interface Personaje {
+    id: number;
+    nombre: string;
+    poder: number;
+}
 
 @Component({
-    selector: 'app-dragonball',
+    selector: 'app-dragonballsuper',
     imports: [CommonModule],
-    templateUrl: './dragonball.html'
+    templateUrl: './dragonballsuper.html'
 })
 
-export class DragonBallComponent {
+export class DragonBallSuperComponent {
     nombre = signal('');
     poder = signal(0);
 
