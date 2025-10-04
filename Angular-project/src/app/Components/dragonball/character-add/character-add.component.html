@@ -1,0 +1,11 @@
+<h3>Agregar: {{ name() }}</h3>
+<input type="text" class="form-control" placeholder="Nombre"
+[value]="name()"
+(input)="name.set($event.target.value)">
+<input type="number" 
+class="form-control" 
+placeholder="Poder"
+[value]="power()"
+(input)="power.set(+$event.target.value)">
+
+<button class="btn btn-primary" (click)="addCharacter()">Agregar</button>

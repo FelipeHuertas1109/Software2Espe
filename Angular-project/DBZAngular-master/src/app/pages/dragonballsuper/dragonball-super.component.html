@@ -1,0 +1,14 @@
+<h1>Dragon Ball</h1>
+<p>Dragon Ball es un anime y manga creado por Akira Toriyama.</p>
+
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <dragonball-character-add (newCharacter)="drabonballService.addCharacter($event)" />  
+    </div>
+
+
+    <div class="col-12 col-sm-6">
+        <app-character-list [characters]="drabonballService.characters()" />
+    </div>
+
+</section>

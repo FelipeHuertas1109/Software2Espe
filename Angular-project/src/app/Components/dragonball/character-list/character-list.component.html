@@ -1,0 +1,11 @@
+<ul>
+    @for (personaje of characters(); track personaje.id; let idx = $index) {
+        <li>
+            <span>{{idx + 1}} - {{ personaje.name }}</span>
+            <span [class.text-danger]="personaje.power >= 8000"
+                [class.text-warning]="personaje.power >= 5000 && personaje.power < 8000"
+                [class.text-success]="personaje.power < 5000"
+                > {{ personaje.power }}</span>
+        </li>
+    }
+</ul>

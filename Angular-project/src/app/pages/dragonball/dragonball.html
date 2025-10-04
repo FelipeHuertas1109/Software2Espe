@@ -1,0 +1,35 @@
+<h1>Dragon Ball</h1>
+<p>Dragon Ball es un anime y manga creado por Akira Toriyama.</p>
+
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <h3>Agregar: {{ nombre() }}</h3>
+        <input type="text" class="form-control" placeholder="Nombre"
+        [value]="nombre()"
+        (input)="nombre.set($event.target.value)">
+        <input type="number" 
+        class="form-control" 
+        placeholder="Poder"
+        [value]="poder()"
+        (input)="poder.set(+$event.target.value)">
+        
+        <button class="btn btn-primary" (click)="agregarPersonaje()">Agregar</button>
+    </div>
+
+
+    <div class="col-12 col-sm-6">
+        <h3>Lista de personajes</h3>
+        <ul>
+        @for (personaje of personajes(); track personaje.id; let idx = $index) {
+            <li>
+                <span>{{idx + 1}} - {{ personaje.nombre }}</span>
+                <span [class.text-danger]="personaje.poder >= 8000"
+                    [class.text-warning]="personaje.poder >= 5000 && personaje.poder < 8000"
+                    [class.text-success]="personaje.poder < 5000"
+                    > {{ personaje.poder }}</span>
+            </li>
+        }
+        </ul>
+    </div>
+
+</section>
